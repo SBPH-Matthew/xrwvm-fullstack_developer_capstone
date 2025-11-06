@@ -12,7 +12,10 @@ def initiate():
     ]
 
     car_make_instances = [
-        CarMake.objects.create(name=data["name"], description=data["description"])
+        CarMake.objects.create(
+            name=data["name"],
+            description=data["description"],
+        )
         for data in car_make_data
     ]
 
