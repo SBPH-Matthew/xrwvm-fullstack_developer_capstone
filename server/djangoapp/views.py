@@ -44,7 +44,10 @@ def registration(request):
 
     try:
         User.objects.get(username=username)
-        return JsonResponse({"userName": username, "error": "Already Registered"})
+        return JsonResponse({
+            "status": 200,
+            "dealers": dealerships,
+        })
     except User.DoesNotExist:
         user = User.objects.create_user(
             username=username,
