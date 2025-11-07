@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const carsSchema = new Schema({
+const inventorySchema = new Schema({
   dealer_id: {
     type: Number,
     required: true,
@@ -29,4 +29,4 @@ const carsSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model('Car', carsSchema);
+module.exports = mongoose.model('Inventory', inventorySchema);
